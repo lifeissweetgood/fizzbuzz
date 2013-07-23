@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// To compile:
+//      $ gcc -o fizzbuzz fizzbuzz.c
+// To run:
+//      $ ./fizzbuzz [number]
+
 void fizzbuzz(int n)
 {
     int i;
