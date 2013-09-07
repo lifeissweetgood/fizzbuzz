@@ -18,3 +18,5 @@ $ ./fizzbuzz [num]              // To run it
 $ javac fizzbuzz.java           // To compile it
 $ java fizzbuzz                 // To run it
 
+# Python implementation
+$ python fizzbuzz.py [num]
