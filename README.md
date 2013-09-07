@@ -12,10 +12,12 @@ NOTE: I modified it slightly so that it takes user input to determine the number
 
 # C implementation
 $ gcc -o fizzbuzz fizzbuzz.c    // To compile it
+
 $ ./fizzbuzz [num]              // To run it
 
 # Java implementation
 $ javac fizzbuzz.java           // To compile it
+
 $ java fizzbuzz                 // To run it
 
 # Python implementation
