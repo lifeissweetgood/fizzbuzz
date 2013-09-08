@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function fizzbuzz(e)
+            {
+                var num = document.forms["fizzbuzzform"]["number"].value;
+                var resultdiv = document.getElementById("result");
+                var pnode = document.createElement("p");
+                var pnodeStartMsg = document.createElement("p");
+                pnodeStartMsg.appendChild(document.createTextNode("Printing Fizzes and Buzzes!"));
+                pnode.appendChild(pnodeStartMsg);
+                for( var i=1; i<=num; i++)
+                {
+                    if( i % 15 == 0 )
+                    {
+                        var pnodetmp = document.createElement("p");
+                        pnodetmp.appendChild(document.createTextNode("FizzBuzz"));
+                        pnode.appendChild(pnodetmp);
+                    } else if( i % 5 == 0 ) {
+                        var pnodetmp = document.createElement("p");
+                        pnodetmp.appendChild(document.createTextNode("Buzz"));
+                        pnode.appendChild(pnodetmp);
+                    } else if( i % 3 == 0 ) {
+                        var pnodetmp = document.createElement("p");
+                        pnodetmp.appendChild(document.createTextNode("Fizz"));
+                        pnode.appendChild(pnodetmp);
+                    } else {
+                        var pnodetmp = document.createElement("p");
+                        pnodetmp.appendChild(document.createTextNode(i));
+                        pnode.appendChild(pnodetmp);
+                    }
+                    resultdiv.appendChild(pnode);
+                }
+                var pnodeEndMsg = document.createElement("p");
+                pnodeEndMsg.appendChild(document.createTextNode("----------------"));
+                pnode.appendChild(pnodeEndMsg);
+                if( e && e.preventDefault)
+                    e.preventDefault();
+                else if( window.event && window.event.returnValue)
+                    window.event.returnValue = false;
+                return false;
+            }
+        </script>
+    </head>
+    <body>
+        <form name="fizzbuzzform" onsubmit="fizzbuzz()">
+            Give me a number! (Must be greater than 0)
+            <input type="text" name="number"/></br>
+            <input type="submit" name="submit" value="Fizzbuzz it!"/>
+        </form>
+        <div id="result">
+        </div>
+    </body>
+</html>

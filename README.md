@@ -22,3 +22,6 @@ $ java fizzbuzz                 // To run it
 
 # Python implementation
 $ python fizzbuzz.py [num]
+
+# JavaScript implementation
+fizzbuzzjs.html
